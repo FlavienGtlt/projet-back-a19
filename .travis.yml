@@ -13,3 +13,11 @@ script:
   - bundle exec rake RAILS_ENV=test
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+deploy:
+  provider: heroku
+  api_key:
+    secure: 56ce9cac-c46d-44b7-81b7-e2395631333d
+  app: projet-back-a19
+  run:
+    - "bundle install --without development test"
+    - "bundle exec rails db:migrate"    
