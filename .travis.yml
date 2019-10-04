@@ -1,6 +1,6 @@
 language: ruby
 rvm:
- - 2.6.4
+ - 2.3.3
 env:
   global:
     - CC_TEST_REPORTER_ID=15bde1e683cfab61bc4cfdaf0d9aa78aa9d1322bcdd2b8fd1acf665befa4c197
