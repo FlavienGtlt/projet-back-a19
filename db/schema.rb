@@ -13,9 +13,9 @@
 ActiveRecord::Schema.define(version: 2019_09_27_092541) do
 
   create_table "students", force: :cascade do |t|
-    t.string "LastName"
-    t.string "Name"
-    t.date "Birthdate"
+    t.string "lastName"
+    t.string "name"
+    t.date "birthdate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
