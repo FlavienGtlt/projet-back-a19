@@ -1,3 +1,3 @@
 class Student < ApplicationRecord
-	validates :Name, :LastName, presence: true
+    validates :name, :last_name, presence: true
 end

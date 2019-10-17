@@ -1,18 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Lastname:</strong>
-  <%= @student.LastName %>
-</p>
-
-<p>
   <strong>Name:</strong>
-  <%= @student.Name %>
+  <%= @student.name %>
 </p>
 
 <p>
-  <strong>Birthdate:</strong>
-  <%= @student.Birthdate %>
+  <strong>Last name:</strong>
+  <%= @student.last_name %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @student.birthday %>
 </p>
 
 <%= link_to 'Edit', edit_student_path(@student) %> |
