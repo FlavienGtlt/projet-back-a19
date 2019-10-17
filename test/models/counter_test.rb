@@ -1,11 +1,14 @@
 require 'test_helper'
 
 class CounterTest < ActiveSupport::TestCase
-  test "should have the necessary required validators" do
-    c = Counter.new
-    c.value = 0
-    c.increment!
+  test "should increment the value" do
 
-    assert c.value = 1
+    counter = Counter.new
+    counter.value = 0
+
+    counter.increment!
+
+    assert counter.value == 1
+
   end
 end

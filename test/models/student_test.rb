@@ -1,12 +1,22 @@
 require 'test_helper'
 
 class StudentTest < ActiveSupport::TestCase
+
   test "should have the necessary required validators" do
+
     student = Student.new
+
     assert_not student.valid?
-    assert_equal [:Name, :LastName], student.errors.keys
-    student.Name = "Gerard"
-    student.LastName= "Bouchard"
+
+    assert_equal [:name, :last_name], student.errors.keys
+
+    student.name = "Gerard"
+
+    student.last_name= "Bouchard"
+
     assert student.valid?
+
   end
+
 end
+

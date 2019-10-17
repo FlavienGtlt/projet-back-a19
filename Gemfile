@@ -4,9 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
- # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.3.13' , group: [:development, :test]
-gem 'pg', '~> 1.1', group: [:production]
+# Use sqlite3 as the database for Active Record
+gem 'sqlite3', '~> 1.3.6', group: [:test, :development]
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -33,7 +32,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '1.4.1', require: false
+gem 'bootsnap', '1.4.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -53,7 +52,11 @@ group :test do
   gem 'chromedriver-helper', '~> 1.2.0'
 end
 
+
+gem 'pg','~> 0.18.4', group: [:production]
+
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'simplecov','~> 0.17.1', require: false, group: :test
+gem 'simplecov', '~> 0.17.1', require: false, group: :test
